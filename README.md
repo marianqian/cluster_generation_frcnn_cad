@@ -4,4 +4,4 @@ include raster
 py faster and frcnn
 
 code here is not located inside the docker parts
-demo note book would not run if you clone this repository, you need to either figure out how to use the py faster rcnn repo or use the docker image i created.
+demo note book would not run if you clone this repository, you need to either figure out how to use the py faster rcnn repo or use the docker image linked in software requirements
