@@ -54,8 +54,8 @@ def preprocess(path, other=400000, lower=25, upper=100):
     #Zeros out pixels outside of the breast
     im_temp[im_temp == np.max(im_temp)] = 0 
     
-    #0.7 can also be changed, but I used 0.7 for all of my pre-processing. 
-    #Choosing to use the values greater than 0.7 and keeping the 25th to 100th percentile values.
+    #The value 0.7 can also be changed, but I used 0.7 for all of my pre-processing. 
+    #Choosing to keep only the pixel values greater than 0.7 and keeping the 25th to 100th percentile values.
     p1, p2 = np.percentile(im_temp[im_temp > 0.7], (lower, upper))
 
     test = exposure.rescale_intensity(im_temp, in_range=(p1, p2)) * 255  # Edit this value to change the image bits
